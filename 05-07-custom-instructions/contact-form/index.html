@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>問い合わせフォーム</title>
+  <style>
+    /* 全体のレイアウト */
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 8px;
+    }
+
+    /* フォームグループ */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    /* 必須マーク */
+    .required {
+      color: red;
+      margin-left: 4px;
+    }
+
+    /* 入力フィールド */
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    textarea {
+      height: 140px;
+      resize: vertical;
+    }
+
+    /* エラー時の赤枠 */
+    input[type="text"].error,
+    textarea.error {
+      border-color: red;
+    }
+
+    /* エラーメッセージ */
+    .error-message {
+      color: red;
+      font-size: 0.875rem;
+      margin-top: 4px;
+      min-height: 1.2em;
+    }
+
+    /* 文字数カウンター */
+    .char-counter {
+      font-size: 0.8rem;
+      color: #666;
+      text-align: right;
+      margin-top: 4px;
+    }
+
+    .char-counter.over-limit {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* 送信ボタン */
+    button[type="submit"] {
+      padding: 10px 28px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    /* 成功メッセージ */
+    .success-message {
+      color: green;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>問い合わせフォーム</h1>
+
+  <form id="contact_form" novalidate>
+
+    <!-- 名前 -->
+    <div class="form-group">
+      <label for="name">
+        名前<span class="required">*</span>
+      </label>
+      <input type="text" id="name" name="name" placeholder="例）山田 太郎">
+      <div class="error-message" id="name_error"></div>
+    </div>
+
+    <!-- メールアドレス -->
+    <div class="form-group">
+      <label for="email">
+        メールアドレス<span class="required">*</span>
+      </label>
+      <input type="text" id="email" name="email" placeholder="例）example@example.com">
+      <div class="error-message" id="email_error"></div>
+    </div>
+
+    <!-- 電話番号 -->
+    <div class="form-group">
+      <label for="phone">
+        電話番号<span class="required">*</span>
+      </label>
+      <input type="text" id="phone" name="phone" placeholder="例）09012345678（ハイフンなし）">
+      <div class="error-message" id="phone_error"></div>
+    </div>
+
+    <!-- 問い合わせ内容 -->
+    <div class="form-group">
+      <label for="inquiry">
+        問い合わせ内容<span class="required">*</span>
+      </label>
+      <textarea id="inquiry" name="inquiry" placeholder="問い合わせ内容を500文字以内で入力してください。"></textarea>
+      <div class="char-counter" id="inquiry_counter">0 / 500</div>
+      <div class="error-message" id="inquiry_error"></div>
+    </div>
+
+    <button type="submit">送信する</button>
+    <div class="success-message" id="success_message"></div>
+
+  </form>
+
+  <script src="main.js"></script>
+</body>
+</html>
