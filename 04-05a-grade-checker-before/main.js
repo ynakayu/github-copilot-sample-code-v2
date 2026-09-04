@@ -1,8 +1,6 @@
-const score = 98;
+const score = 85;
 
-if (score >= 95) {
-  console.log("成績：S");
-} else if (score >= 90) {
+if (score >= 90) {
   console.log("成績：A");
 } else if (score >= 80) {
   console.log("成績：B");
