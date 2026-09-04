@@ -1,0 +1,25 @@
+{
+  "name": "learn-github-copilot",
+  "version": "1.0.0",
+  "description": "- Udemy, Proglus（プログラス）, FindUアカデミーにて公開中のGitHub Copilot入門カリキュラムのサンプルコードです。 - 該当コースの受講生の方が、個人的な学習の範囲内でご利用いただけます。 - 無断転載を禁止します。 (c)2026 Yuta Nakamura, Proglus Inc.",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ynakayu/github-copilot-sample-code-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ynakayu/github-copilot-sample-code-v2/issues"
+  },
+  "homepage": "https://github.com/ynakayu/github-copilot-sample-code-v2#readme",
+  "devDependencies": {
+    "jest": "^30.5.1",
+    "jest-environment-jsdom": "^30.5.1"
+  }
+}
