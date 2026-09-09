@@ -1,7 +1,7 @@
 const num1 = 20;
 const num2 = 5;
 
-const addition = num1 + num2;
+const addition = num1  num2;
 const subtraction = num1 - num2;
 const multiplication = num1 * num2;
 const division = num1 / num2;
